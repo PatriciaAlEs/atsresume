@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-undef */
-import {FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaYoutube,} from "react-icons/fa";
+import {FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaYoutube, FaTelegramPlane,} from "react-icons/fa";
 import {CgWebsite} from "react-icons/cg";
 import React, {useContext, useState} from "react";
 import {ResumeContext} from "../../builder";
@@ -28,6 +28,7 @@ const Preview = () => {
     {name: "facebook", icon: <FaFacebook/>},
     {name: "instagram", icon: <FaInstagram/>},
     {name: "youtube", icon: <FaYoutube/>},
+    {name: "telegram", icon: <FaTelegramPlane/>},
     {name: "website", icon: <CgWebsite/>},
   ];
 
