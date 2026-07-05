@@ -20,7 +20,7 @@ const WorkExperiences = () => {
             contentEditable
             suppressContentEditableWarning
           >
-            Work Experience
+            Experiencia
           </h2>
           {resumeData.workExperience.map((item, index) => (
             <WorkExperience

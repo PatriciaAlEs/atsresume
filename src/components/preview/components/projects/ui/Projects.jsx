@@ -24,7 +24,7 @@ const Projects = () => {
             contentEditable
             suppressContentEditableWarning
           >
-            Projects
+            Proyectos
           </h2>
           {resumeData.projects.map((item, index) => (
             <Draggable

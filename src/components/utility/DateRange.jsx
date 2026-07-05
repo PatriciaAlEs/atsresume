@@ -1,18 +1,21 @@
 const DateRange = ({startYear, endYear, id}) => {
-  // TODO make as an app param
-  const lang = 'en-Us' // 'default'
+  const lang = 'es-ES'
 
   if (!startYear) {
     return <p id={id} className="sub-content"></p>;
   }
 
   const start = new Date(startYear);
-  const startStr = `${start.toLocaleString(lang, {month: 'short'})} ${start.getFullYear()}`
+  const formatDate = (date) => {
+    const month = date.toLocaleString(lang, {month: 'short'}).replace(".", "");
+    return `${month.charAt(0).toUpperCase()}${month.slice(1)} ${date.getFullYear()}`;
+  };
+  const startStr = formatDate(start);
   const end = new Date(endYear);
-  let endStr = 'Present'
+  let endStr = 'Actualidad'
 
   if (end != "Invalid Date") {
-    endStr = `${end.toLocaleString(lang, {month: 'short'})} ${end.getFullYear()}`
+    endStr = formatDate(end);
   }
 
   return (

@@ -36,7 +36,7 @@ const WorkExperience = ({item, index}) => {
               id={`work-experience-start-end-date`}
             />
           </div>
-          <p className="content">{item.position}</p>
+          <p className="content italic">{item.position}</p>
           <p className="content hyphens-auto">{item.description}</p>
 
           <Droppable
