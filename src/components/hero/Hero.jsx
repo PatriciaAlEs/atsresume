@@ -23,7 +23,7 @@ export default function Hero() {
                                     Builder
                                 </Link>
                                 <Link href="/templates" className="py-4 px-2 text-gray-700 hover:text-gray-900">
-                                    Templates
+                                    Profiles
                                 </Link>
                                 <Link href="/examples" className="py-4 px-2 text-gray-700 hover:text-gray-900">
                                     Examples
@@ -33,10 +33,10 @@ export default function Hero() {
                     </div>
                     <div className="flex flex-col justify-center items-center h-full text-center">
                         <h1 className="text-6xl font-bold text-gray-800 mb-2">
-                            Get hired with an ATS <br />
+                            ProfileStack <br />
                             <span className="text-[#325178]">
                                 <Typewriter
-                                    words={['optimized', 'Perfect', 'Professional']}
+                                    words={['role-ready', 'maintainable', 'structured']}
                                     loop={0}
                                     cursor
                                     cursorStyle='_'
@@ -46,13 +46,13 @@ export default function Hero() {
                                 />
                             </span>
                             <br />
-                            Resume.
+                            CV profiles.
                         </h1>
                         <p className="text-gray-600 mb-4">
-                            ATSResume is an innovative resume builder that helps job seekers create a professional and optimized resume for applicant tracking systems. Our platform uses cutting-edge technology to analyze and optimize your resume for maximum visibility and success. Say goodbye to manual formatting frustration and wasted time, and Create your winning resume with ATSResume today and get noticed by employers.
+                            ProfileStack helps you maintain multiple versions of your CV from structured profile data. Keep one professional history, adapt it for different roles, and export clean one-page resumes when you need them.
                         </p>
                         <Link href="/builder" className="inline-block bg-[#325178] text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-[#284160] transition duration-200 hover:-translate-y-1 transform hover:shadow-lg">
-                            Make My Resume
+                            Open Builder
                         </Link>
                     </div>
                 </div>
@@ -75,10 +75,10 @@ const About = () => {
                             <GrOptimize className="text-8xl text-gray-800 mr-4" />
                             <div className="flex flex-col gap-2">
                                 <h1 className="text-2xl font-bold text-gray-800">
-                                    ATS-optimized
+                                    Role-specific profiles
                                 </h1>
                                 <p className="text-gray-600">
-                                    Our platform uses cutting-edge technology to analyze and optimize your resume for maximum visibility and success with applicant tracking systems.
+                                    Create focused CV variants for different roles without duplicating your whole professional history by hand.
                                 </p>
                             </div>
                         </div>
@@ -86,10 +86,10 @@ const About = () => {
                             <GrFingerPrint className="text-8xl text-gray-800 mr-4" />
                             <div className="flex flex-col gap-2">
                                 <h1 className="text-2xl font-bold text-gray-800">
-                                    Easy to use
+                                    Easy to maintain
                                 </h1>
                                 <p className="text-gray-600">
-                                    Our user-friendly interface makes it easy to build a professional, ATS-friendly resume in minutes. No more frustration or wasted time spent on manual formatting.
+                                    Edit structured profile data, switch between variants, and keep each CV consistent as your experience changes.
                                 </p>
                             </div>
                         </div>
@@ -97,10 +97,10 @@ const About = () => {
                             <MdMoneyOff className="text-8xl text-gray-800 mr-4" />
                             <div className="flex flex-col gap-2">
                                 <h1 className="text-2xl font-bold text-gray-800">
-                                    Free
+                                    Open source
                                 </h1>
                                 <p className="text-gray-600">
-                                    Our platform is completely free to use. No hidden fees or subscriptions. Just create an account and start building your dream resume today!
+                                    Use it locally, customize it for your workflow, and keep full control of your professional data.
                                 </p>
                             </div>
                         </div>
@@ -108,10 +108,10 @@ const About = () => {
                             <DiResponsive className="text-8xl text-gray-800 mr-4" />
                             <div className="flex flex-col gap-2">
                                 <h1 className="text-2xl font-bold text-gray-800">
-                                    Mobile-friendly
+                                    Print-ready
                                 </h1>
                                 <p className="text-gray-600">
-                                    Our platform is fully responsive and mobile-friendly, so you can build your resume on the go. No more waiting until you get home to work on your resume.
+                                    Keep a clean A4 preview and export your selected profile to PDF from the browser print dialog.
                                 </p>
                             </div>
                         </div>
@@ -119,10 +119,10 @@ const About = () => {
                             <FcDataBackup className="text-8xl text-gray-800 mr-4" />
                             <div className="flex flex-col gap-2">
                                 <h1 className="text-2xl font-bold text-gray-800">
-                                    Download Backup Data
+                                    Download profile data
                                 </h1>
                                 <p className="text-gray-600">
-                                    Download your resume data in JSON format and store it in a safe place. You can use this data to restore your resume in the future.
+                                    Save the current CV data as JSON and keep backups outside the repository when needed.
                                 </p>
                             </div>
                         </div>
@@ -130,10 +130,10 @@ const About = () => {
                             <FcUpload className="text-8xl text-gray-800 mr-4" />
                             <div className="flex flex-col gap-2">
                                 <h1 className="text-2xl font-bold text-gray-800">
-                                    Upload Backup Data
+                                    Upload profile data
                                 </h1>
                                 <p className="text-gray-600">
-                                    Upload your resume data in JSON format to restore your resume. This is useful if you accidentally delete your resume or if you want to switch devices.
+                                    Load a saved JSON profile to continue editing or move a CV between local environments.
                                 </p>
                             </div>
                         </div>

@@ -1,122 +1,158 @@
-# ATSResume
+# ProfileStack
 
-A cutting-edge resume builder that helps job seekers create a professional, ATS-friendly resume in minutes. Our platform uses the latest technology to analyze and optimize your resume for maximum visibility and success with applicant tracking systems. Say goodbye to frustration and wasted time spent on manual resume formatting. Create your winning resume with ATSResume today and get noticed by employers.
+ProfileStack is an open source tool for maintaining multiple CV variants from structured profile data.
 
-## Demo
+It is not meant to be just another resume generator. The goal is to keep a professional profile maintainable over time, then adapt it into focused CV versions for different roles such as frontend, backend, mobile, product, data, QA, DevOps or marketing.
 
-#### [https://atsresume.vercel.app/](https://atsresume.vercel.app/)
-![image](https://user-images.githubusercontent.com/61316762/218017511-fbbaa7da-6154-449f-9e46-8de45b0e6c29.png)
+## Why ProfileStack
 
-### Resume Score
-#### https://www.resumego.net/resume-checker/
-![image](https://user-images.githubusercontent.com/61316762/218143206-f0e5e764-52bc-4c25-84f2-6b2fff00cd4b.png)
+Most people do not have one single CV. They have one professional history that needs to be presented differently depending on the role.
 
-## Change Log
+ProfileStack helps you:
 
-- Drag and drop sections to reorder them in the resume(Work Experience, Projects, Skills)
+- Maintain several role-specific CV profiles in one project.
+- Keep each profile as a simple `*.profile.js` data file.
+- Switch between profiles from the UI.
+- Edit and preview a clean one-page CV.
+- Export the selected profile to PDF from the browser.
+- Keep private local profiles out of Git.
 
-## Sections
+## Credits
 
-- [Personal Information](#personal-information)
-- [Social Media](#social-media)
-- [Summary](#summary)
-- [Educations](#education)
-- [Work Experience](#work-experience)
-- [Projects](#projects)
-- [Technical Skills](#technical-skills)
-- [Soft Skills](#soft-skills)
-- [Languages](#languages)
-- [Additional Skills](#additional-skills)
-- [Certifications](#certifications)
+ProfileStack is a fork of [ATSResume](https://github.com/sauravhathi/atsresume), originally created by [Saurav Hathi](https://github.com/sauravhathi).
 
-## Personal Information
+This version keeps the resume-builder foundation and evolves it toward a profile-variant workflow: multiple CVs, one maintainable structure, and role-specific positioning.
 
-- Name
-- Email
-- Phone
-- Address
-- Profile Picture
+## Installation
 
-## Social Media
+```bash
+npm install
+npm run dev
+```
 
-- Social Media Links
+Open the local URL printed by Next.js, usually:
 
-## Summary
+```text
+http://localhost:3000
+```
 
-- Summary
+## Available Scripts
 
-## Educations
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
 
-- Degree
-- Institute
-- Start Date
-- End Date
+## Profile Files
 
-## Work Experience
+Public demo profiles live in:
 
-- Company
-- Designation
-- Description
-- Key Achievements
-- Start Date
-- End Date
+```text
+src/data/profiles/
+```
 
-Description optional
+Each profile exports this structure:
 
-## Projects
+```javascript
+export default {
+  id: "frontend",
+  label: "Frontend",
+  description: "Short description shown in the selector.",
+  resume: {
+    name: "Alex Morgan",
+    position: "Frontend Developer",
+    contactInformation: "+1 555 010 123",
+    email: "alex.morgan@example.com",
+    address: "Remote",
+    profilePicture: "",
+    socialMedia: [],
+    summary: "",
+    education: [],
+    workExperience: [],
+    projects: [],
+    skills: [],
+    languages: [],
+    certifications: []
+  }
+}
+```
 
-- Project Name
-- Description
-- key Achievements
-- Start Date
-- End Date
+The app automatically loads files matching:
 
-Description optional
+```text
+*.profile.js
+```
 
-## Technical Skills
+## Create a New Profile
 
-- Technical Skills
+1. Create a new file in `src/data/profiles/`.
+2. Name it with the profile target, for example:
 
-## Soft Skills
+```text
+backend.profile.js
+product-manager.profile.js
+qa-engineer.profile.js
+```
 
-- Soft Skills
+3. Export `{ id, label, description, resume }`.
+4. Restart or refresh the app.
 
-## Languages
+The new profile will appear in the selector without changing application logic.
 
-- Languages
+## Private Local Profiles
 
-## Additional Skills
+If you want to keep real personal CVs locally without publishing them, use private profile files:
 
-- Additional Skills
+```text
+src/data/profiles/my-real-cv.private.profile.js
+```
 
-## Certifications
+Files matching `*.private.profile.js` are ignored by Git. They still match the app loader, so they can be used locally.
 
-- Certifications
+You can also store auxiliary private material in:
 
-## How to Add Key Achievements
+```text
+src/data/private-profiles/
+```
 
-Key achievements are the most important part of your resume. 
+That folder is ignored by Git.
 
-- Add key achievements to your resume to make it more attractive and increase your chances of getting noticed by employers.
-- Add key achievements to your work experience and projects.
-- Add key achievements to your resume by clicking on the new line.
+## Export to PDF
 
-## PageSpeed Insights
+1. Run the app with `npm run dev`.
+2. Select the profile you want to export.
+3. Adjust the content in the editor if needed.
+4. Use the print button.
+5. Choose "Save as PDF" in your browser print dialog.
 
-![image](https://user-images.githubusercontent.com/61316762/218244257-e85172dc-46bd-4f4b-b9c2-9bd17c693cc8.png)
+The preview is designed around a clean A4 layout.
 
-![image](https://user-images.githubusercontent.com/61316762/218244267-c46f5d02-b742-4b4c-ba7e-ae1bfb1e04d4.png)
+## Philosophy
+
+ProfileStack is built around a simple editorial idea:
+
+> A CV should be written for a person, while remaining structured enough to pass automated filters.
+
+Instead of stuffing one document with every possible keyword, ProfileStack encourages focused variants:
+
+- A frontend CV can prioritize interface decisions and component architecture.
+- A backend CV can prioritize APIs, data modeling and reliability.
+- A mobile CV can prioritize app flows, offline data and maintainable UI state.
+
+The same professional history can support different stories, as long as each version stays truthful and defensible.
+
+## Current Demo Profiles
+
+The repository includes fictitious demo profiles:
+
+- `frontend.profile.js`
+- `backend.profile.js`
+- `mobile.profile.js`
+
+They are examples only and should be replaced with your own professional data.
 
 ## License
 
-[MIT](https://github.com/sauravhathi/atsresume/blob/main/LICENSE.md)
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## Authors and acknowledgment
-
-- [Saurav Hathi](https://github.com/sauravhathi)
+MIT. See [LICENSE.md](./LICENSE.md).
